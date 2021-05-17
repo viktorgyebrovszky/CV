@@ -32,10 +32,13 @@
 }
 
 body {
+   width: 840px;
+   height: 1162px;
    background: URL(particles-js);
    font-size: 11px;
    line-height: 20px;
    color: #555555;
+   margin: 50px auto ;
 }
 
 .bold {
@@ -49,10 +52,10 @@ body {
 }
 
 .resume {
-  width: 840px;
-  height: 1162px;
+  /* width: 840px;
+  height: 1162px; */
   display: flex;
-  margin: 50px auto;
+  /* margin: 50px auto ; */
 }
 
 .resume .resume_left {

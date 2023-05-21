@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
-
+@page {
+    size: 7in 9.25in;
+    margin: 27mm 16mm 27mm 16mm;
+}
 
 #particles-js canvas {
     display: block;
@@ -32,7 +35,7 @@
 }
 
 body {
-   width: 840px;
+   width: 800px;
    height: 1162px;
    background: URL(particles-js);
    font-size: 11px;
@@ -41,6 +44,17 @@ body {
    margin: 50px auto ;
    display: flex;
 }
+
+/* UNHIDE FOR PDF (and hide the above) */
+/* body {
+   width: 800px;
+   height: 1200px;
+   background: URL(particles-js);
+   font-size: 11px;
+   line-height: 20px;
+   color: black;
+   display: flex;
+} */
 
 .bold {
   font-weight: 600;
@@ -53,8 +67,8 @@ body {
 }
 
 .resume {
-  width: 840px;
-  height: 1162px;
+  /* width: 840px;
+  height: 1162px; */
   display: flex;
   /* margin: 50px auto ; */
 }
@@ -64,44 +78,46 @@ body {
   background: #201d3a;
 }
 
-.resume .resume_left .resume_profile {
+.resume_profile {
   width: 100%;
-  height: 150px;
+  height: 120px;
 
 }
 
-.resume .resume_left .resume_profile img {
-  width: 45%;
-  height: 96%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top:  20px
+.resume_profile img {
+  height: auto;
+  width: 35%;
+  margin: 15px 0 0 85px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
 }
 
-.resume .resume_left .resume_content {
+.resume_content {
   padding: 0 20px;
 }
 
 .resume .title {
   margin-bottom: 5px;
+  margin-top: 10px;
 }
 
-.resume .resume_left .bold {
+.resume_left .bold {
   color: #fff;
 }
 
-.resume .resume_left .regular {
+.resume_left .regular {
   color: #b1eaff;
 }
 
-.resume .resume_item {
-  padding: 5px 0 5px 0;
+.resume_item {
+  padding: 0px 0 5px 0;
   border-bottom: 1px solid #747285;
 }
 
-.resume .resume_left .resume_item:last-child,
-.resume .resume_right .resume_item:last-child {
+.resume_item:last-child {
   border-bottom: 0px;
 }
 
@@ -113,11 +129,12 @@ body {
   /* type: disc; */
 }
 
-.resume .resume_left ul li:last-child {
+.resume_left ul li:last-child {
   margin-bottom: 0;
 }
 
-.resume .resume_left ul li .icon {
+.resume_left ul li .icon {
+  margin: 0 0 0 0;
   padding-top: 5px;
   padding-right: 10px;
   color: #f4f5ff;
@@ -127,7 +144,7 @@ body {
   height:1.5rem;
 }
 
-.resume .resume_left ul li .icon_2 {
+.resume_left ul li .icon_2 {
   padding-right: 10px;
   padding-bottom: 20px;
   color: #f4f5ff;
@@ -243,18 +260,21 @@ body {
 
 /* right */
 
-.btn{
+.pdf_download_btn{
   background-color: #76ACC9;
-  border: outset;
+  border: 1px solid ;
   color: #201D39;
   padding: 5px 5px;
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
   border-radius: 6px;
+  position: fixed;
+  margin-left: 45%;
+  margin-top: -10px;
 }
 
-.btn:hover{
+.pdf_download_btn:hover{
   background-color: #A4D7F4;
 }
 
@@ -268,7 +288,7 @@ body {
   width: 520px;
   background: #f4f5ff;
   padding: 20px;
-  padding-top: 5px;
+  padding-top: 0;
 }
 
 .resume .resume_right .bold {
@@ -309,9 +329,13 @@ body {
   top: 5px;
   left: -14px;
   width: 4px;
-  height: 4px;
+  height: 3px;
   border-radius: 100%;
   border: 2px solid #747285;
+}
+
+.resume_education ul {
+  line-height: 1.5em;
 }
 
 .resume_work ul li:after,
@@ -331,8 +355,9 @@ body {
   line-height: 1.5em;
 }
 
-.resume_info_list ul {
-  line-height: 0.5em !important;
+.resume_info_list ul li{
+  height: 2.2% !important;
+  /* padding-top:0; */
 }
 
 .work_exp ul li:before {
@@ -364,8 +389,8 @@ body {
 }
 
 .resume .resume_right .resume_hobby ul li {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border: 2px solid #747285;
   border-radius: 50%;
   position: relative;
@@ -373,15 +398,15 @@ body {
 }
 
 .resume .resume_right .resume_hobby ul li i {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .resume .resume_right .resume_hobby ul li:before {
   content: "";
   position: absolute;
-  top: 27px;
-  right: -47px;
-  width: 47px;
+  top: 17px;
+  right: -72px;
+  width: 72px;
   height: 2px;
   background: #747285;
 }

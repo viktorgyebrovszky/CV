@@ -130,6 +130,10 @@ body {
     letter-spacing:0.5px;
 }
 
+/* .title {
+    display: none;
+} */
+
 .skill-tag{
     display:inline-block;
     padding:5px 12px;

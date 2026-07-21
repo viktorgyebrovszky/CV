@@ -115,6 +115,35 @@ body {
 .resume_item {
   padding: 0px 0 5px 0;
   border-bottom: 1px solid #747285;
+  color: #b1eaff;
+}
+
+.resume_skills .skills_group{
+    margin-bottom:18px;
+}
+
+.resume_skills .skills_group h5{
+    font-size:15px;
+    color:#4a89dc;
+    font-weight:700;
+    margin-bottom:10px;
+    letter-spacing:0.5px;
+}
+
+.skill-tag{
+    display:inline-block;
+    padding:5px 12px;
+    margin:4px 4px 4px 0;
+    background:#2d2d2d;
+    color:#fff;
+    border-radius:16px;
+    font-size:12px;
+    font-weight:500;
+    transition:0.2s;
+}
+
+.skill-tag:hover{
+    background:#4a89dc;
 }
 
 .resume_item:last-child {
